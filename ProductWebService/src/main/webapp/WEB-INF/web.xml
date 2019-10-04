@@ -10,13 +10,13 @@
   <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
   <init-param> 
   	<param-name>jersey.config.server.provider.packages</param-name>
-  	<param-value>com.zensar.webService.java, com.zensar.webService.user, com.zensar.webService.download,com.zensar.webService.upload</param-value>
+  	<param-value>com.zensar.restfull</param-value>
   </init-param>
-    <init-param> 
+    <!-- <init-param> 
   	<param-name>jersey.config.server.provider.classnames</param-name>
   	<param-value>org.glassfish.jersey.media.multipart.MultiPartFeature</param-value>
   	
-  </init-param>
+  </init-param> -->
   
   <load-on-startup>1</load-on-startup>
   </servlet>
