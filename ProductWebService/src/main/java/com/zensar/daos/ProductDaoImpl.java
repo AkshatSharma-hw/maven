@@ -11,6 +11,7 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import com.zensar.entities.Product;
@@ -42,19 +43,25 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Override
 	public void insert(Product product) {
+		Transaction t= s.beginTransaction();
 		s.save(product);
+		t.commit();
 
 	}
 
 	@Override
 	public void update(Product product) {
+		Transaction t= s.beginTransaction();
 		s.update(product);
+		t.commit();
 		
 	}
 
 	@Override
 	public void delete(Product product) {
+		Transaction t= s.beginTransaction();
 		s.delete(product);
+		t.commit();
 
 	}
 
